@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url><loc>https://dassoru.github.io/</loc>
+  </url>
+  <url><loc>https://dassoru.github.io/about.html</loc>
+  </url>
+  <url><loc>https://dassoru.github.io/journal.html</loc>
+  </url>
+  <url><loc>https://dassoru.github.io/photography/index.html</loc>
+  </url>
+  <url><loc>https://dassoru.github.io/photography/innocent-smile-at-the-paddy-field.html</loc>
+    <image:image><image:loc>https://dassoru.github.io/photos/innocent-smile-at-the-paddy-field.webp</image:loc><image:title>Innocent Smile</image:title><image:caption>The beauty of being a child.</image:caption></image:image>
+  </url>
+  <url><loc>https://dassoru.github.io/photography/patience-waterside-bird.html</loc>
+    <image:image><image:loc>https://dassoru.github.io/photos/patience-waterside-bird.webp</image:loc><image:title>Patience</image:title><image:caption>Sometimes, all we can do is wait.</image:caption></image:image>
+  </url>
+  <url><loc>https://dassoru.github.io/photography/backwaters-boat-ride.html</loc>
+    <image:image><image:loc>https://dassoru.github.io/photos/backwaters-boat-ride.webp</image:loc><image:title>Backwaters Boat Ride</image:title><image:caption>What if I was in their photograph?</image:caption></image:image>
+  </url>
+  <url><loc>https://dassoru.github.io/photography/wild-flowers-golden-light.html</loc>
+    <image:image><image:loc>https://dassoru.github.io/photos/wild-flowers-golden-light.webp</image:loc><image:title>Wild Flowers</image:title><image:caption>Even a forgotten flower has a purpose.</image:caption></image:image>
+  </url>
+  <url><loc>https://dassoru.github.io/photography/vibe-in-the-trees.html</loc>
+    <image:image><image:loc>https://dassoru.github.io/photos/vibe-in-the-trees.webp</image:loc><image:title>2000 Vibe</image:title><image:caption>Even this gentleman knows his good side.</image:caption></image:image>
+  </url>
+  <url><loc>https://dassoru.github.io/photography/blood-is-thicker-than-water.html</loc>
+    <image:image><image:loc>https://dassoru.github.io/photos/blood-is-thicker-than-water.webp</image:loc><image:title>Blood Is Thicker Than Water</image:title><image:caption>A father’s little treasure.</image:caption></image:image>
+  </url>
+  <url><loc>https://dassoru.github.io/photography/birds-by-the-water.html</loc>
+    <image:image><image:loc>https://dassoru.github.io/photos/birds-by-the-water.webp</image:loc><image:title>The Evening Bath</image:title><image:caption>A little moment of relief.</image:caption></image:image>
+  </url>
+  <url><loc>https://dassoru.github.io/photography/closest-one-to-us.html</loc>
+    <image:image><image:loc>https://dassoru.github.io/photos/closest-one-to-us.webp</image:loc><image:title>Closest One to Us</image:title><image:caption>A quiet moment beneath the Moon.</image:caption></image:image>
+  </url>
+  <url><loc>https://dassoru.github.io/photography/just-curious.html</loc>
+    <image:image><image:loc>https://dassoru.github.io/photos/just-curious.webp</image:loc><image:title>Just Curious</image:title><image:caption>Seeing the world for the first time.</image:caption></image:image>
+  </url>
+</urlset>
