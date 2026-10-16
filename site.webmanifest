@@ -1,14 +1,14 @@
 {
-  "name": "DASSORU \u2014 Photography by Basuru Jayasanka",
+  "name": "DASSORU — Photography by Basuru Jayasanka",
   "short_name": "DASSORU",
-  "start_url": "/",
+  "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#0b0b0b",
   "theme_color": "#0b0b0b",
   "icons": [
     {
       "src": "assets/dassoru-symbol.png",
-      "sizes": "192x192",
+      "sizes": "190x195",
       "type": "image/png"
     }
   ]
