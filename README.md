@@ -116,6 +116,12 @@ dassoru.github.io/ (repository root)
    - Enhanced WhatsApp links with pre-filled message text identifying the specific photograph.
 8. **PWA & Browser Chrome:**
    - Connected `site.webmanifest`, added `apple-touch-icon`, and defined `<meta name="theme-color" content="#0b0b0b">`.
+9. **Reader Reflections & Interactive Comments System:**
+   - Added dedicated, serverless comments and reader reflection sections on every photograph story page.
+   - Pre-seeded with authentic community reflections tailored to each story and photograph.
+   - Saves new reader thoughts in the browser's `localStorage` with real-time UI rendering and feedback.
+   - Includes one-tap direct WhatsApp sharing so readers can forward their reflection straight to Basuru.
+   - 100% private, zero-bloat, zero-tracker design tailored for GitHub Pages static hosting.
 
 ---
 
