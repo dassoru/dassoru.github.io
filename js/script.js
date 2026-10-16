@@ -73,6 +73,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 3. Reader Reflections & Comments System
   initCommentsSystem();
+
+  // 4. Contact Form Handler (contact.html)
+  initContactForm();
 });
 
 /**
@@ -337,6 +340,111 @@ function initCommentsSystem() {
       if (firstCard) {
         firstCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       }
+    });
+  }
+}
+
+/**
+ * Interactive Contact Form Handler (contact.html)
+ */
+function initContactForm() {
+  const form = document.getElementById('siteContactForm');
+  if (!form) return;
+
+  const btnWhatsApp = document.getElementById('btnSubmitWhatsApp');
+  const statusCard = document.getElementById('contactStatus');
+
+  const nameInput = document.getElementById('contactName');
+  const emailInput = document.getElementById('contactEmail');
+  const phoneInput = document.getElementById('contactPhone');
+  const subjectInput = document.getElementById('contactSubject');
+  const messageInput = document.getElementById('contactMessage');
+
+  function showStatus(htmlMessage, isSuccess = true) {
+    if (!statusCard) return;
+    statusCard.className = `contact-status-card ${isSuccess ? 'success' : 'error'}`;
+    statusCard.innerHTML = htmlMessage;
+    statusCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  function validate() {
+    const name = nameInput ? nameInput.value.trim() : '';
+    const email = emailInput ? emailInput.value.trim() : '';
+    const message = messageInput ? messageInput.value.trim() : '';
+
+    if (!name) {
+      showStatus('Please provide your name.', false);
+      if (nameInput) nameInput.focus();
+      return false;
+    }
+    if (!email || !email.includes('@')) {
+      showStatus('Please provide a valid email address so Basuru can reply to you.', false);
+      if (emailInput) emailInput.focus();
+      return false;
+    }
+    if (!message) {
+      showStatus('Please write a message describing your enquiry.', false);
+      if (messageInput) messageInput.focus();
+      return false;
+    }
+    return {
+      name: name,
+      email: email,
+      phone: phoneInput ? phoneInput.value.trim() : '',
+      subject: subjectInput ? subjectInput.value : 'General Enquiry',
+      message: message
+    };
+  }
+
+  // 1. Submit via Email (Primary)
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const data = validate();
+    if (!data) return;
+
+    const emailSubject = encodeURIComponent(`[DASSORU Enquiry] ${data.subject} — ${data.name}`);
+    const emailBody = encodeURIComponent(
+      `Hello Basuru,\n\n` +
+      `Name: ${data.name}\n` +
+      `Email: ${data.email}\n` +
+      `Phone/WhatsApp: ${data.phone || 'Not provided'}\n` +
+      `Enquiry Type: ${data.subject}\n\n` +
+      `Message:\n${data.message}\n\n` +
+      `-- Sent from DASSORU Photography Website (dassoru.github.io)`
+    );
+
+    const mailtoUrl = `mailto:basuruphotography3276@gmail.com?subject=${emailSubject}&body=${emailBody}`;
+
+    // Trigger user's mail client
+    window.location.href = mailtoUrl;
+
+    showStatus(
+      `<strong>Thank you, ${escapeHtml(data.name)}!</strong><br>` +
+      `Your email draft has been generated. If your email app did not open automatically, you can send directly to <strong>basuruphotography3276@gmail.com</strong> or use the <strong>WhatsApp</strong> button below.`
+    );
+  });
+
+  // 2. Submit via WhatsApp (Direct chat)
+  if (btnWhatsApp) {
+    btnWhatsApp.addEventListener('click', () => {
+      const data = validate();
+      if (!data) return;
+
+      const waText = encodeURIComponent(
+        `Hello Basuru, my name is ${data.name}.\n\n` +
+        `I am getting in touch regarding: *${data.subject}*\n` +
+        `Email: ${data.email}\n` +
+        (data.phone ? `Phone: ${data.phone}\n` : '') +
+        `\n*Message:*\n${data.message}`
+      );
+
+      const waUrl = `https://wa.me/94763011292?text=${waText}`;
+      window.open(waUrl, '_blank', 'noopener,noreferrer');
+
+      showStatus(
+        `<strong>Connecting to WhatsApp...</strong><br>` +
+        `Opening WhatsApp chat with Basuru. If WhatsApp does not open, <a href="${waUrl}" target="_blank" rel="noopener noreferrer" style="color:#d9c9b2;text-decoration:underline;">click here to open chat directly</a>.`
+      );
     });
   }
 }

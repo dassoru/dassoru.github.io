@@ -1029,8 +1029,295 @@ footer img {
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* ==========================================================================
+   Contact Page Styles
+   ========================================================================== */
+.contact-page {
+  padding-top: 150px;
+  padding-bottom: 120px;
+}
+
+.contact-page-intro {
+  margin-bottom: 60px;
+}
+
+.contact-page-intro h1 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(40px, 5.5vw, 76px);
+  font-weight: 400;
+  line-height: 1.05;
+  margin: 14px 0 22px;
+}
+
+.contact-page-intro h1 em {
+  color: #d9c9b2;
+  font-style: italic;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 50px;
+  align-items: start;
+}
+
+.contact-form-card {
+  background: rgba(20, 19, 18, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 3px;
+  padding: 40px 42px;
+}
+
+.contact-card-header {
+  margin-bottom: 28px;
+}
+
+.contact-card-title {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 26px;
+  font-weight: 400;
+  color: #f7f6f2;
+  margin: 0 0 10px;
+}
+
+.contact-card-subtitle {
+  color: #999;
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.form-group select {
+  background: #141312;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #f7f6f2;
+  padding: 12px 16px;
+  font-family: inherit;
+  font-size: 13px;
+  border-radius: 2px;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23a67c52' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 14px;
+  cursor: pointer;
+}
+
+.form-group select:focus {
+  outline: none;
+  border-color: #a67c52;
+  box-shadow: 0 0 0 2px rgba(166, 124, 82, 0.25);
+}
+
+.form-group select option {
+  background: #1a1918;
+  color: #f7f6f2;
+}
+
+.contact-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 15px;
+}
+
+.button-whatsapp {
+  background: transparent;
+  color: #25d366;
+  border: 1px solid rgba(37, 211, 102, 0.4);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.button-whatsapp:hover {
+  background: rgba(37, 211, 102, 0.12);
+  border-color: #25d366;
+  color: #55f38d;
+}
+
+.contact-privacy-note {
+  margin-top: 20px;
+  font-size: 11px;
+  color: #777;
+  line-height: 1.6;
+}
+
+.contact-status-card {
+  display: none;
+  margin-top: 20px;
+  padding: 16px 20px;
+  border-radius: 2px;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.contact-status-card.success {
+  display: block;
+  background: rgba(166, 124, 82, 0.15);
+  border: 1px solid rgba(166, 124, 82, 0.45);
+  color: #f7f6f2;
+}
+
+.contact-status-card.error {
+  display: block;
+  background: rgba(220, 53, 69, 0.15);
+  border: 1px solid rgba(220, 53, 69, 0.45);
+  color: #ff9999;
+}
+
+/* Contact Info Panel */
+.contact-info-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contact-channel-card {
+  background: rgba(20, 19, 18, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 3px;
+  padding: 26px 28px;
+  transition: border-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-channel-card:hover {
+  border-color: rgba(166, 124, 82, 0.4);
+}
+
+.channel-tag {
+  font-size: 8px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #a67c52;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.channel-tag svg {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+}
+
+.channel-val {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 20px;
+  color: #f7f6f2;
+  margin: 0 0 8px;
+  word-break: break-word;
+}
+
+.channel-desc {
+  font-size: 12px;
+  color: #999;
+  line-height: 1.6;
+  margin: 0 0 14px;
+}
+
+.channel-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #d9c9b2;
+  border-bottom: 1px solid rgba(217, 201, 178, 0.35);
+  padding-bottom: 2px;
+  transition: all 0.2s ease;
+}
+
+.channel-link:hover {
+  color: #fff;
+  border-color: #a67c52;
+}
+
+/* Social Media Channels Grid */
+.social-channels-card {
+  background: rgba(20, 19, 18, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 3px;
+  padding: 26px 28px;
+}
+
+.social-channels-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  background: #151413;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 2px;
+  color: #d9c9b2;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+}
+
+.social-btn svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+.social-btn:hover {
+  background: rgba(166, 124, 82, 0.15);
+  border-color: #a67c52;
+  color: #fff;
+}
+
+/* Services Advisory Box */
+.contact-services-card {
+  background: rgba(16, 15, 14, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-left: 2px solid #a67c52;
+  border-radius: 0 3px 3px 0;
+  padding: 22px 24px;
+}
+
+.contact-services-card h4 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 16px;
+  color: #f7f6f2;
+  margin: 0 0 10px;
+  font-weight: 400;
+}
+
+.contact-services-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+  color: #8c8a85;
+  line-height: 1.8;
+}
+
+.contact-services-card li strong {
+  color: #d9c9b2;
+  font-weight: 500;
+}
+
 /* Responsive Styles */
 @media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
   .archive-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -1212,4 +1499,18 @@ footer img {
   .comment-card {
     padding: 20px 18px;
   }
+
+  .contact-page {
+    padding-top: 100px;
+    padding-bottom: 75px;
+  }
+
+  .contact-form-card {
+    padding: 28px 20px;
+  }
+
+  .social-channels-grid {
+    grid-template-columns: 1fr;
+  }
 }
+

@@ -19,6 +19,7 @@ dassoru.github.io/ (repository root)
 ├── 404.html                  <-- Custom branded 404 error page
 ├── index.html                <-- Homepage with selected photographs & journal preview
 ├── about.html                <-- Full biography, camera history, & philosophy
+├── contact.html              <-- Dedicated contact page with enquiry form & social channels
 ├── journal.html              <-- Story collection for all photographs
 ├── robots.txt                <-- Search crawler instructions with sitemap reference
 ├── sitemap.xml               <-- Complete XML sitemap including Google Image tags
@@ -122,6 +123,12 @@ dassoru.github.io/ (repository root)
    - Saves new reader thoughts in the browser's `localStorage` with real-time UI rendering and feedback.
    - Includes one-tap direct WhatsApp sharing so readers can forward their reflection straight to Basuru.
    - 100% private, zero-bloat, zero-tracker design tailored for GitHub Pages static hosting.
+10. **Dedicated Contact & Enquiry Page (`contact.html`):**
+    - Created full editorial Contact page with interactive enquiry form, subject routing, and client-side validation.
+    - Integrated direct WhatsApp button with formatted message payload to `+94 76 301 1292`.
+    - Integrated direct email draft action to `basuruphotography3276@gmail.com`.
+    - Added comprehensive social links (Facebook, Instagram, YouTube, TikTok) and studio location info.
+    - Updated global navigation across all pages to link directly to `contact.html`.
 
 ---
 
